@@ -476,10 +476,67 @@
   color: #e63989;
 }
 .header_bottom-container {
+  font-family: GothamProLight;
   width: 1300px;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 105px;
 }
+
+.header_bottom-right {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.header_bottom-right a {
+  padding: 40px 10px;
+}
+
+.header_bottom-right::after {
+  content: "";
+  margin: 11px;
+  height: 80px;
+  border-right: 2px solid chocolate;
+}
+
+.header_bottom-right-logo {
+  font-size: 20px;
+}
+
+.header_bottom-left {
+  width: 50%;
+  font-size: 14px;
+}
+
+.adress-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80px;
+  margin-top: 5px;
+}
+
+.adress-line {
+  margin: 4px 0;
+}
+.adress-title {
+  padding-right: 10%;
+  white-space: nowrap;
+}
+
+.adress-info {
+  color: chocolate;
+  font-weight: bold;
+  white-space: nowrap;
+  /*margin-left: 10%;*/
+}
+
 .drop-content_sub-container {
   position: absolute;
   width: 470px;
@@ -550,6 +607,12 @@
   }
 }
 @media (max-width: 1170px) {
+  .header_bottom-left {
+    width: 60%;
+  }
+  .header_bottom-right {
+    width: 40%;
+  }
   .header-top_right {
     min-width: 520px;
   }
@@ -641,9 +704,17 @@
     padding: 10px 20px 0 0;
   }
 }
-@media (max-width: 871px) {
+@media (max-width: 880px) {
   .header_bottom-container {
     right: 0;
+    height: 190px;
+  }
+  .header_bottom-right::after {
+    height: 145px;
+  }
+  .adress-box {
+    flex-wrap: nowrap;
+    height: auto;
   }
 }
 @media (max-width: 830px) {
@@ -657,6 +728,16 @@
   }
 }
 @media (max-width: 740px) {
+  .header_bottom-right {
+    flex-direction: column;
+    width: 25%;
+  }
+  .header_bottom-right::after {
+    display: none;
+  }
+  .header_bottom-left {
+    width: 70%;
+  }
   .header-top_right {
     min-width: 183px;
   }
@@ -673,28 +754,6 @@
   .header_bottom-container {
     width: 100%;
   }
-  .header_bottom-container:before, .header_bottom-container:after {
-    content: " ";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    z-index: 5;
-  }
-  .header_bottom-container:before {
-    left: 0;
-    background: rgba(0, 0, 0, 0.65);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(50%, rgba(0, 0, 0, 0.33)), color-stop(51%, rgba(0, 0, 0, 0.32)), color-stop(53%, rgba(0, 0, 0, 0.31)), color-stop(87%, rgba(0, 0, 0, 0.08)), color-stop(100%, transparent));
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0.32) 51%, rgba(0, 0, 0, 0.31) 53%, rgba(0, 0, 0, 0.08) 87%, transparent 100%);
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0.32) 51%, rgba(0, 0, 0, 0.31) 53%, rgba(0, 0, 0, 0.08) 87%, transparent 100%);
-  }
-  .header_bottom-container:after {
-    right: 0;
-    top: 0;
-    background: transparent;
-    background: -webkit-gradient(left top, right top, color-stop(0%, transparent), color-stop(13%, rgba(0, 0, 0, 0.08)), color-stop(47%, rgba(0, 0, 0, 0.31)), color-stop(49%, rgba(0, 0, 0, 0.32)), color-stop(50%, rgba(0, 0, 0, 0.33)), color-stop(100%, rgba(0, 0, 0, 0.65)));
-    background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.08) 13%, rgba(0, 0, 0, 0.31) 47%, rgba(0, 0, 0, 0.32) 49%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0.65) 100%);
-    background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.08) 13%, rgba(0, 0, 0, 0.31) 47%, rgba(0, 0, 0, 0.32) 49%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0.65) 100%);
-  }
   .nav {
     z-index: 25;
   }
@@ -710,6 +769,9 @@
   }
 }
 @media (max-width: 720px) {
+  .header_bottom-right a {
+    padding: 20px 10px;
+  }
   .header-top-mob_tel {
     font-size: 16px;
     text-align: center;
@@ -755,7 +817,27 @@
     left: 17px !important;
   }
 }
-
+@media screen and (max-width: 600px){
+  .header_bottom-right::after {
+    display: none;
+  }
+  .header_bottom-right a {
+    padding: 15px 10px;
+  }
+}
+@media screen and (max-width: 500px){
+  .header_bottom-container {
+    flex-direction: column;
+    height: 245px;
+  }
+  .header_bottom-right {
+    flex-direction: row;
+  }
+  .adress-box {
+    flex-wrap: nowrap;
+    margin-top: 10px;
+  }
+}
 /*End menu.scss*/
 
 
