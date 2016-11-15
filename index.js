@@ -146,7 +146,7 @@ var SecondScreenShopItem = React.createClass({
     render: function() {
         return (
             <div className="second-screen_shop-item">
-                <a className="second-screen_shop-link" href={this.props.href}>
+                <a className="second-screen_shop-link" href={this.props.href} target="_blank">
                     <img src={this.props.src} />
                 </a>
             </div>
@@ -378,7 +378,7 @@ var Footer = React.createClass({
     render: function() {
         return (
             <div className="footer-main">
-                <a href="#">GlobalCasta</a>
+                <a href="https://modnakasta.ua/info/global">GlobalCasta</a>
             </div>
         )
     }

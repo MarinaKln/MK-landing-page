@@ -42,7 +42,7 @@ body {
 }
 
 h1 {
-  font-family: 'GothamProMedium';
+  font-family: 'GothamProMedium', sans-serif;
   text-align: center;
   margin: 0;
   padding: 10px;
@@ -140,6 +140,9 @@ a {
     height: 200px;
     width: 200px;
   }
+}
+.third-screen_order-item {
+  width: 24%;
 }
 
 .icon-step0, .icon-step1, .icon-step2, .icon-step3  {
@@ -258,6 +261,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 80px;
+  background: #070a0c;
   a {
     color: #fff;
     padding: 10px 35px;
@@ -307,6 +311,12 @@ a {
   .second-screen_shop-item {
     width: 49%;
   }
+  .unslider-arrow {
+    left: 5px;
+  }
+  .unslider-arrow.prev, .unslider-arrow.next {
+    background-size: 28px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -324,6 +334,12 @@ a {
     display: none;
   }
   .unslider-arrow.next, .unslider-arrow.prev {
-    top: 70%;
+    top: 94%;
+  }
+  .unslider-arrow.next {
+    right: 3px;
+  }
+  .unslider-arrow.prev {
+    left: -4px;
   }
 }
