@@ -33,7 +33,6 @@ body {
 h1 {
   font-family: 'GothamProMedium', sans-serif;
   text-align: center;
-  margin: 0;
   padding: 10px;
   margin-top: 20px;
   font-weight: normal;
@@ -90,7 +89,8 @@ a {
     margin: 35px;
     display: inline-block; }
   .first-screen .first-screen_sub-title {
-    width: 30%; }
+    width: 30%;
+    line-height: 22px; }
 
 .timer {
   position: absolute;
@@ -318,8 +318,6 @@ a {
   .icon-step0::after, .icon-step1::after, .icon-step2::after {
     display: none; }
   .third-screen_order-box, .third-screen_cost-box {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .third-screen_order-item, .third-screen_cost-item {
     width: 50%;
@@ -327,8 +325,6 @@ a {
 
 @media screen and (max-width: 760px) {
   .second-screen_item-box {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .second-screen_shop-item {
     width: 49%; }

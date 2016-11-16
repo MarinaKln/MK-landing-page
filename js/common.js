@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var currentDate = new Date();
-    var futureDate = new Date(2016, 11, 25, 0, 0, 0);
+    var futureDate = new Date(2016, 10, 25, 0, 0, 0);
     var diff = Math.round((futureDate - currentDate) / 1000);
 
    clock = $('.timer').FlipClock({
@@ -9,9 +9,13 @@ $(document).ready(function () {
         language: 'ru'
     });
 
-    console.log($('.timer'));
-
     clock.setTime(diff);
+    if (diff < 0) {
+        clock.setTime(0);
+    } else {
+        clock.setTime(diff);
+    }
+
     clock.setCountdown(true);
     clock.start();
 
@@ -23,7 +27,4 @@ $(document).ready(function () {
             next: '<a class="unslider-arrow next"></a>'
         }
     });
-
-    console.log($('.my-slider'));
-
 });
