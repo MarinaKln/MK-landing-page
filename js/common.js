@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var currentDate = new Date();
-    var futureDate = new Date(2016, 10, 25, 0, 0, 0);
+    var futureDate = new Date(2016, 10, 25, 0, 0, 0); 
     var diff = Math.round((futureDate - currentDate) / 1000);
 
    clock = $('.timer').FlipClock({
