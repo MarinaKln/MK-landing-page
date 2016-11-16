@@ -27,11 +27,15 @@ body {
 .container {
   width: 100%; }
 
+.main {
+  position: relative; }
+
 h1 {
   font-family: 'GothamProMedium', sans-serif;
   text-align: center;
   margin: 0;
   padding: 10px;
+  margin-top: 20px;
   font-weight: normal;
   font-size: 28pt; }
 
@@ -71,17 +75,31 @@ a {
     margin: 5%; }
   .first-screen .arrow {
     background: url("../images/first screen/arrow-down.png") repeat-y;
-    padding: 16px 45px;
+    background-size: 75px 17px;
+    padding: 17px 38px;
     margin: 5%; }
+  .first-screen .first-screen_sub-title {
+    width: 30%; }
 
-.timer-container {
-  position: relative;
-  right: 40%; }
+.timer {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.timer {
+  zoom: 1;
+  transform: scale(0.54);
+  -ms-transform: scale(0.54);
+  -webkit-transform: scale(0.54);
+  -o-transform: scale(0.54);
+  -moz-transform: scale(0.54);
+  font-family: 'GothamProMedium', sans-serif !important; }
 
 .logo {
   background: url("../images/first screen/logo.png") no-repeat;
   background-size: contain;
-  padding: 11% 20%; }
+  padding: 11% 20%;
+  margin-top: 6%; }
 
 .second-screen_item-box {
   display: -webkit-flex;
@@ -144,7 +162,7 @@ a {
   content: url("../images/third screen/right-arrow.png");
   position: relative;
   top: 15px;
-  left: 100%; }
+  left: 125%; }
 
 .icon-step0 {
   background: url("../images/third screen/icon0.png") 50% no-repeat; }
@@ -260,7 +278,9 @@ a {
     height: 100px; }
   .third-screen_cost-item img {
     height: 180px;
-    width: 180px; } }
+    width: 180px; }
+  .first-screen .logo {
+    margin-top: 11%; } }
 
 @media screen and (max-width: 900px) {
   .slider-item_picture {
@@ -285,7 +305,11 @@ a {
   .unslider-arrow {
     left: 5px; }
   .unslider-arrow.prev, .unslider-arrow.next {
-    background-size: 28px; } }
+    background-size: 28px; }
+  .timer {
+    zoom: 0.8;
+    left: 19%;
+    top: -13px; } }
 
 @media screen and (max-width: 450px) {
   .second-screen_item-box, .third-screen_order-box, .third-screen_cost-box {
@@ -304,4 +328,13 @@ a {
   .unslider-arrow.next {
     right: 3px; }
   .unslider-arrow.prev {
-    left: -4px; } }
+    left: -4px; }
+  .first-screen .logo {
+    margin-top: 25%; }
+  .timer {
+    left: 0; } }
+
+@media screen and (max-width: 330px) {
+  .timer {
+    zoom: 0.5;
+    left: 10%; } }

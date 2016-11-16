@@ -299,15 +299,13 @@ var FirstScreen = React.createClass({
     render: function() {
         return (
             <div className="first-screen">
-                <div className="timer-container timer_block">
-                    <div className="timer"></div>
-                </div>
+                <div className="timer"></div>
                 <div className="logo"></div>
                 <h2>ГЛАВНАЯ РАСПРОДАЖА ГОДА В США</h2>
                 <h2>25 НОЯБРЯ</h2>
                 <span className="line"></span>
                 <h1> GlobalKasta</h1>
-                <span>сервис авиадоставки товаров из  интернет магазинов США от 14 грн</span>
+                <span className="first-screen_sub-title">сервис авиадоставки товаров из  интернет магазинов США от 14 грн</span>
                 <span className="arrow"></span>
             </div>
         )

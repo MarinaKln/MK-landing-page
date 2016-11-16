@@ -3,14 +3,13 @@ $(document).ready(function () {
     var futureDate = new Date(2016, 11, 25, 0, 0, 0);
     var diff = Math.round((futureDate - currentDate) / 1000);
 
-    console.log("----");
-
-
-    clock = $('.timer').FlipClock({
+   clock = $('.timer').FlipClock({
         clockFace: 'DailyCounter',
         autoStart: false,
         language: 'ru'
     });
+
+    console.log($('.timer'));
 
     clock.setTime(diff);
     clock.setCountdown(true);
