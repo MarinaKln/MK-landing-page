@@ -13,21 +13,26 @@
 .header-top_drop-content, .drop-content--campaign-menu, .drop-content_sub-container, .drop-content_container {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 .header-top_left, .header-top, .header-top_right, .header-top_anon-right, .header-top_anon-tel, .nav_toggle-container, .header_bottom, .drop-content, .header-top_drop-content, .drop-content_item, .drop-content_sub-container, .drop-content_container {
   display: -ms-flexbox;
   display: -webkit-flex;
+  display: -webkit-box;
   display: flex;
 }
 .inline-flex, .nav_content {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
 }
 .header-top_left, .header-top, .header-top_right, .header-top_anon-right, .header-top_anon-tel, .drop-content_item {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
@@ -228,6 +233,7 @@
   border-top: 1px solid #40474c;
   border-bottom: 0;
   background: #1d1f21;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   z-index: 0;
 }
@@ -271,6 +277,7 @@
   z-index: -1;
   background: #4FB748;
   background: -webkit-gradient(left top, right top, color-stop(0%, #4FB748), color-stop(100%, #D10074));
+  background: -webkit-linear-gradient(left, #4FB748 0%, #D10074 100%);
   background: linear-gradient(to right, #4FB748 0%, #D10074 100%);
 }
 .nav-toggle.current .g-line:after {
@@ -283,6 +290,7 @@
   z-index: -1;
   background: #D10074;
   background: -webkit-gradient(left top, right top, color-stop(0%, #D10074), color-stop(100%, #4FB748));
+  background: -webkit-linear-gradient(left, #D10074 0%, #4FB748 100%);
   background: linear-gradient(to right, #D10074 0%, #4FB748 100%);
 }
 .nav-toggle.current {
@@ -463,12 +471,15 @@
   margin: 0 auto;
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   /*height: 105px;*/
 }
@@ -476,6 +487,7 @@
 .header_bottom-right {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
@@ -484,11 +496,18 @@
   white-space: nowrap;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
 .header_bottom-right a {
-  padding: 40px 10px;
+  padding: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header_bottom-right a:hover {
+  color: #99a7ad;
 }
 
 .header_bottom-right::after {
@@ -510,9 +529,12 @@
 .adress-box {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -575,6 +597,7 @@
   height: 100%;
 }
 .mob-menu_link {
+  height: -webkit-calc(95% / 8);
   height: calc(95% / 8);
   max-height: 50px;
   padding-left: 20px;
@@ -643,6 +666,8 @@
   .header-top_left {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
   }
   .header-top_menu-mob + .header-top_drop-content {
@@ -656,6 +681,8 @@
   .header_bottom-container {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
   }
   .header_bottom-right, .header_bottom-left {
@@ -666,7 +693,7 @@
     display: none;
   }
   .header_bottom-right a {
-    padding: 10px;
+    padding: 20px 30px;
   }
   .header-top_help, .header-top_user, .header-top_karta {
     display: none;
@@ -710,6 +737,7 @@
     padding-left: 0;
   }
   .header_bottom-container {
+    width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     position: relative;
   }
@@ -719,6 +747,7 @@
   .header-top_anon-right {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
+    -webkit-box-pack: end;
     justify-content: flex-end;
     width: auto;
     padding: 10px 20px 0 0;

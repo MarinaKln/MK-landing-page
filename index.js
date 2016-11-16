@@ -181,22 +181,22 @@ var ThirdScreenCostItem = React.createClass({
         )
     }
 });
-
-var FourthScreenSliderItem = React.createClass({
-    render: function() {
-        return (
-            <li className="fourth-screen_slider-item">
-                <div className="slider-item_text">
-                    <h3>{this.props.title}</h3>
-                    <p>{this.props.text}</p>
-                </div>
-                <div className="slider-item_picture">
-                    <img src={this.props.src} />
-                </div>
-            </li>
-        )
-    }
-});
+//
+//var FourthScreenSliderItem = React.createClass({
+//    render: function() {
+//        return (
+//            <li className="fourth-screen_slider-item">
+//                <div className="slider-item_text">
+//                    <h3>{this.props.title}</h3>
+//                    <p>{this.props.text}</p>
+//                </div>
+//                <div className="slider-item_picture">
+//                    <img src={this.props.src} />
+//                </div>
+//            </li>
+//        )
+//    }
+//});
 
 var SecondScreenShopsRow = React.createClass({
     showItem: function(shop, index) {
@@ -299,7 +299,6 @@ var FirstScreen = React.createClass({
     render: function() {
         return (
             <div className="first-screen">
-                <div className="timer"></div>
                 <div className="logo"></div>
                 <h2>ГЛАВНАЯ РАСПРОДАЖА ГОДА В США</h2>
                 <h2>25 НОЯБРЯ</h2>
@@ -345,12 +344,6 @@ var ThirdScreen = React.createClass({
                 <ThirdScreenOrdersRow
                     data = {steps}
                 />
-                <div className="third-screen_video-box">
-                    <div className="video-top">
-                        <h1>ИЛИ СМОТРИТЕ ВИДЕО</h1>
-                        <button className="play-btn"></button>
-                    </div>
-                </div>
                 <ThirdScreenCostsRow
                     data = {prices}
                 />
@@ -359,28 +352,28 @@ var ThirdScreen = React.createClass({
     }
 });
 
-var FourthScreen = React.createClass({
-    render: function() {
-        return (
-            <div className="fourth-screen">
-            <h1 className="fourth-screen_title">Лайфхаки на Black Friday USA</h1>
-            <FourthScreenSlider
-                data = {slider}
-            />
-            </div>
-        )
-    }
-});
+//var FourthScreen = React.createClass({
+//    render: function() {
+//        return (
+//            <div className="fourth-screen">
+//            <h1 className="fourth-screen_title">Лайфхаки на Black Friday USA</h1>
+//            <FourthScreenSlider
+//                data = {slider}
+//            />
+//            </div>
+//        )
+//    }
+//});
 
-var Footer = React.createClass({
-    render: function() {
-        return (
-            <div className="footer-main">
-                <a href="https://modnakasta.ua/info/global">GlobalCasta</a>
-            </div>
-        )
-    }
-});
+//var Footer = React.createClass({
+//    render: function() {
+//        return (
+//            <div className="footer-main">
+//                <a href="https://modnakasta.ua/info/global">GlobalCasta</a>
+//            </div>
+//        )
+//    }
+//});
 
 
 
@@ -391,8 +384,6 @@ var Main = React.createClass({
                 <FirstScreen />
                 <SecondScreen />
                 <ThirdScreen />
-                <FourthScreen />
-                <Footer />
             </div>
         )
     }

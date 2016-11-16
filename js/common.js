@@ -24,4 +24,6 @@ $(document).ready(function () {
         }
     });
 
+    console.log($('.my-slider'));
+
 });
