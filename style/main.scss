@@ -52,7 +52,6 @@ h1 {
   margin: 0;
   padding: 10px;
   font-weight: normal;
-  height: 49px;
 }
 img {
   vertical-align: middle;
@@ -289,7 +288,7 @@ a {
 
 .unslider-arrow.next, .unslider-arrow.prev {
   top: 56%;
-  padding: 35px;
+  padding: 35px 16px;
 }
 
 .unslider-arrow.next {
@@ -312,16 +311,6 @@ a {
     border: 1px solid chocolate;
     border-radius: 4px;
   }
-}
-
-@media screen and (min-width: 1600px ) {
-  .step-title {
-    height: 70px;
-  }
-  //.second-screen h1, .third-screen h1, .fourth-screen h1 {
-  //  font-size: 60pt;
-  //  margin: 70px 0;
-  //}
 }
 
 @media screen and  (max-width: 1070px) {
@@ -372,9 +361,6 @@ a {
   }
   .second-screen_shop-item {
     width: 49%;
-  }
-  .unslider-arrow {
-    left: 5px;
   }
   .unslider-arrow.prev, .unslider-arrow.next {
     background-size: 28px;
