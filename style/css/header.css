@@ -689,6 +689,9 @@
     width: 100%;
     font-size: 12px;
   }
+  .header_bottom-left-title {
+    padding-left: 30px;
+  }
   .header_bottom-right::after {
     display: none;
   }
@@ -849,6 +852,10 @@
     flex-wrap: nowrap;
     padding: 3% 10%;
     height: auto;
+    font-size: 8px;
+  }
+  .header_bottom-right {
+    font-size: 8px;
   }
 }
 /*End menu.scss*/
